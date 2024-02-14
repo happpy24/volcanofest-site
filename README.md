@@ -25,11 +25,11 @@ You are in a fallen land, falled by a curse. You and up to 7 other adventurers m
 ### Who is making this?
 Us! The Unity Party Game dev team :)
 - [Vivian Speijer](https://github.com/happpy24)
-- [Max Lichtneker](https://www.youtube.com/watch?v=tXAbnRAFkrY)
-- [Eke Reus](https://www.youtube.com/watch?v=tXAbnRAFkrY)
+- [Max Lichtneker](https://github.com/MaxLichtneker)
+- [Eke Reus](https://github.com/E-Meister2012)
 - [Laura van Ekris](https://github.com/LauraVEkris)
 - [Sander Grootjans](https://github.com/Sander470)
-- [Robert Dooren](https://www.youtube.com/watch?v=tXAbnRAFkrY)
+- [Robert Dooren](https://github.com/Robert-ME-DH)
 
 ---
 ### Credits, Resources, Links that helped us and more!
