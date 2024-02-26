@@ -2,6 +2,15 @@
     margin: 0;
 }
 
+.links {
+    margin: 1.5rem;
+    padding: 1rem;
+    background-color: aquamarine;
+    justify-content: space-between;
+    position: absolute;
+    right: 0px;
+}
+
 .login {
     display: grid;
     justify-content: center;
