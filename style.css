@@ -16,6 +16,8 @@
     justify-content: center;
     justify-items: center;
     padding: 1em;
+    top: 50%;
+    transform: translateY(50%);
 }
 
 .flex-outer {
