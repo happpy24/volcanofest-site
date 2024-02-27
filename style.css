@@ -6,9 +6,14 @@
     margin: 1.5rem;
     padding: 1rem;
     background-color: aquamarine;
+    display: flex;
     justify-content: space-between;
     position: absolute;
     right: 0px;
+}
+
+.links a {
+    margin: 0 2rem;
 }
 
 .login {
@@ -19,6 +24,20 @@
     top: 50%;
     transform: translateY(50%);
 }
+
+@media only screen and (max-width: 300px) {
+    /* For smaller phones: */
+    .links {
+      right: auto;
+      width: 100svw;
+      margin: 0;
+      justify-content: space-around;
+      padding: 1rem 0rem;
+    }
+    .links a {
+        margin: 0;
+    }
+  }
 
 .flex-outer {
     background-color: aqua;
