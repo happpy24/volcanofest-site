@@ -21,28 +21,42 @@
     justify-content: center;
     justify-items: center;
     padding: 1em;
-    top: 50%;
     transform: translateY(50%);
 }
 
-@media only screen and (max-width: 300px) {
+.title {
+    font-size: larger;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 450px) {
+
     /* For smaller phones: */
     .links {
-      right: auto;
-      width: 100svw;
-      margin: 0;
-      justify-content: space-around;
-      padding: 1rem 0rem;
+        right: auto;
+        width: 100svw;
+        margin: 0;
+        justify-content: space-around;
+        padding: 1rem 0rem;
     }
+
     .links a {
         margin: 0;
     }
-  }
+}
+
+.form {
+    background-color: aqua;
+    display: grid;
+    justify-content: center;
+}
 
 .flex-outer {
-    background-color: aqua;
-    padding: 2rem;
-    display: grid;
+    padding: 0 2rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
     justify-content: center;
 }
 
@@ -75,7 +89,7 @@
     justify-content: center;
 }
 
-.row input[type=submit] {
+.row button {
     margin: 10%;
     padding: 8px 16px;
     border: none;

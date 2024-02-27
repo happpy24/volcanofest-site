@@ -20,7 +20,8 @@
       Project UPG!
     </div>
 
-    <form action="webGL.html">
+    <div class="form">
+    <form action="javascript:submit()">
       <ul class="flex-outer">
         <li>
           <label for="code">Code</label>
@@ -30,12 +31,20 @@
           <label for="name">Name</label>
           <input type="text" id="name" placeholder="Name" required maxlength="12">
         </li>
-        <li class="row">
-          <input type="submit" value="Submit">
-        </li>
       </ul>
+      <div class="row">
+        <button type="submit" id="submit">Join Game</button>
+      </div>
     </form>
   </div>
-</body>
+  </div>
 
+<script>
+function submit(){
+console.log("Testing");
+location.href = "webGL.html";
+}
+</script>
+
+</body>
 </html>
