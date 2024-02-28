@@ -1,11 +1,11 @@
 * {
     margin: 0;
+    color: black;
 }
 
 .links {
     margin: 1.5rem;
     padding: 1rem;
-    background-color: aquamarine;
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -46,7 +46,6 @@
 }
 
 .form {
-    background-color: aqua;
     display: grid;
     justify-content: center;
 }
@@ -79,7 +78,6 @@
 .flex-outer input[type=text],
 .flex-outer input[type=number] {
     height: 4em;
-    background-color: rgb(189, 255, 255);
     border: none;
     text-align: center;
 }
