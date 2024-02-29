@@ -22,6 +22,7 @@
     justify-items: center;
     padding: 1em;
     transform: translateY(50%);
+    position: relative;
 }
 
 .title {
@@ -91,9 +92,24 @@
     margin: 10%;
     padding: 8px 16px;
     border: none;
-    background: #333;
+    background: #1F1E1E;
     color: #f2f2f2;
     text-transform: uppercase;
     letter-spacing: .09em;
     border-radius: 2px;
+}
+
+.svg {
+max-width: 25rem;
+max-height: 30rem;
+margin-left: 10%;
+position: absolute;
+bottom: 0px;
+overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+    .svg{
+        max-width: 25svw;
+        max-height: 50svh;
+    }
 }

@@ -25,7 +25,7 @@
         <ul class="flex-outer">
           <li>
             <label for="code">Code</label>
-            <input class="field" type="number" id="code" placeholder="0000" required>
+            <input class="field" type="number" id="code" placeholder="0000" required maxlength="4">
           </li>
           <li>
             <label for="name">Name</label>
@@ -39,46 +39,50 @@
     </div>
   </div>
 
+<div>
+<img class="svg" id="svg">
+</div>
+
   <script>
     //submitting form
     function submit() {
       localStorage.setItem("name", document.getElementById("name").value);
       console.log(localStorage.getItem("name"));
-      location.href = "webGL.html/" + document.getElementById("code").value;
+      location.href = "UPG.html/" + document.getElementById("code").value;
     }
     // background colours
     function setbackground() {
 
-      var index = Math.floor(Math.random() * 3);
-      
+      var index = Math.floor(Math.random() * 4);
+
       var ColorBg = "B296C3"; // plains (index = 0)
       var ColorBox = "866897";
-      var ColorFields = "FFE9FF";
+      var svgSrc = "SVG/FlowerL.svg"
 
-      if (index == 1) // desert
+      if (index == 1){ // desert
         ColorBg = "CDAA4F";
         ColorBox = "AA8634";
-        ColorFields = "F6EDD9";
-
-      if (index == 2) // jungle
+        svgSrc = "SVG/Pyramids.svg"
+      }
+      if (index == 2){ // jungle
         ColorBg = "96B286";
         ColorBox = "496C37";
-        ColorFields = "E8FFE7";
-
-      if (index == 3) // mountains
+        svgSrc = "SVG/FlowerL.svg"
+      }
+      if (index == 3) {// mountains
         ColorBg = "93B7BE";
         ColorBox = "5D87AE";
-        ColorFields = "E7F9FF";
-
+        svgSrc = "SVG/FlowerL.svg"
+      }
       var body = document.getElementById("body");
       var box = document.getElementById("form");
       var links = document.getElementById("links");
-      var field = document.getElementsByClassName("field");
+      var SVG = document.getElementById("svg");
 
       body.style.backgroundColor = "#" + ColorBg;
       box.style.backgroundColor = "#" + ColorBox;
       links.style.backgroundColor = "#" + ColorBox;
-      field.style.backgroundColor = "#" + ColorFields;
+      SVG.src = svgSrc;
     }
   </script>
 
