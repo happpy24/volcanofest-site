@@ -16,19 +16,18 @@
       ColorBg = "CDAA4F";
       ColorBox = "AA8634";
       svgSrc = "SVG/Pyramids.svg";
-      SVG.style.maxHeight = "30svh";
     }
     if (index == 2) { // jungle
       ColorBg = "96B286";
       ColorBox = "496C37";
       svgSrc = "SVG/LeafL.svg";
       SVG.style.margin= "0px";
-      SVG.style.maxWidth = "30svh";
     }
     if (index == 3) {// mountains
       ColorBg = "93B7BE";
       ColorBox = "5D87AE";
       svgSrc = "SVG/Mountains.svg";
+      SVG.style.maxWidth = "none";
     }
 
     body.style.backgroundColor = "#" + ColorBg;

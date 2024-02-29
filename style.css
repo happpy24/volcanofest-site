@@ -105,7 +105,8 @@
 }
 
 .svg {
-max-height: 30rem;
+max-height: 50svh;
+max-width: 30svw;
 margin-left: 10%;
 margin-right: 10%;
 position: absolute;
@@ -114,6 +115,6 @@ overflow: hidden;
 }
 @media only screen and (max-width: 600px) {
     .svg{
-        max-height: 50svh;
+        max-height: 30svh;
     }
 }
