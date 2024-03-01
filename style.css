@@ -104,7 +104,7 @@
     border-radius: 25%;
 }
 
-.svg {
+.svg, .svg2 {
 max-height: 50svh;
 max-width: 30svw;
 margin-left: 10%;
@@ -113,8 +113,13 @@ position: absolute;
 bottom: 0px;
 overflow: hidden;
 }
+
+.svg2{
+    right: 0;
+}
+
 @media only screen and (max-width: 600px) {
-    .svg{
+    .svg, .svg2{
         max-height: 30svh;
     }
 }
