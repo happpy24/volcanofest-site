@@ -3,6 +3,7 @@
     color: black;
 }
 
+/* Links */
 .links {
     margin: 1.5rem;
     padding: 1rem;
@@ -16,19 +17,6 @@
 
 .links a {
     margin: 0 2rem;
-}
-
-.login {
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    padding: 1em;
-    transform: translateY(50%);
-}
-
-.title {
-    font-size: larger;
-    font-weight: bold;
 }
 
 @media only screen and (max-width: 450px) {
@@ -47,6 +35,20 @@
     .links a {
         margin: 0;
     }
+}
+
+/* Join Form */
+.login {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    padding: 1em;
+    transform: translateY(50%);
+}
+
+.title {
+    font-size: larger;
+    font-weight: bold;
 }
 
 .form {
@@ -104,6 +106,7 @@
     border-radius: 25%;
 }
 
+/* SVG */
 .svg, .svg2 {
 max-height: 50svh;
 max-width: 30svw;
@@ -122,4 +125,10 @@ overflow: hidden;
     .svg, .svg2{
         max-height: 30svh;
     }
+}
+
+/* 404 */
+.notFound{
+display: grid;
+justify-content: center;
 }
