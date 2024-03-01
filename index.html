@@ -49,8 +49,7 @@
     function submit() {
       localStorage.setItem("name", document.getElementById("name").value);
       console.log(localStorage.getItem("name"));
-      location.href = "UPG/" + document.getElementById("code").value;
-
+      location.href = "UPG?" + document.getElementById("code").value;
     }
     function loadName() {
       var nameInput = document.getElementById("name");

@@ -107,28 +107,47 @@
 }
 
 /* SVG */
-.svg, .svg2 {
-max-height: 50svh;
-max-width: 30svw;
-margin-left: 10%;
-margin-right: 10%;
-position: absolute;
-bottom: 0px;
-overflow: hidden;
+.svg,
+.svg2 {
+    max-height: 50svh;
+    max-width: 30svw;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: absolute;
+    bottom: 0px;
+    overflow: hidden;
 }
 
-.svg2{
+.svg2 {
     right: 0;
 }
 
 @media only screen and (max-width: 600px) {
-    .svg, .svg2{
+
+    .svg,
+    .svg2 {
         max-height: 30svh;
     }
 }
 
 /* 404 */
-.notFound{
-display: grid;
-justify-content: center;
+.notFound {
+    background-color: #B296C3;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30svh;
+    font-size: larger;
+}
+
+.return {
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+    padding: 15px 25px;
+    border: none;
+    background: #1F1E1E;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    border-radius: 25%;
 }
