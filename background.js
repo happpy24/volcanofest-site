@@ -20,7 +20,7 @@
       ColorBg = "CDAA4F";
       ColorBox = "AA8634";
       svgSrc = "SVG/Pyramids.svg";
-      svg2Src = " ";
+      svg2Src = document.getElementById('svg2').style.display = 'none';
     }
     if (index == 2) { // jungle
       ColorBg = "96B286";
@@ -35,7 +35,7 @@
       ColorBox = "5D87AE";
       svgSrc = "SVG/Mountains.svg";
       SVG.style.maxWidth = "none";
-      svg2Src = " ";
+      svg2Src = document.getElementById('svg2').style.display = 'none';
     }
 
     body.style.backgroundColor = "#" + ColorBg;
