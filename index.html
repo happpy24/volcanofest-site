@@ -49,7 +49,7 @@
     function submit() {
       localStorage.setItem("name", document.getElementById("name").value);
       console.log(localStorage.getItem("name"));
-      location.href = "UPG?" + document.getElementById("code").value;
+      setCookie();
     }
     function loadName() {
       var nameInput = document.getElementById("name");
@@ -57,7 +57,8 @@
     }
     loadName();
   </script>
-  
+    <!-- saving form to cookies -->
+    <script src="cookie.js"></script>
   <!-- changing backgrounds script -->
   <script src="background.js"></script>
 
