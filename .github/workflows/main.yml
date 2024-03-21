@@ -1,0 +1,11 @@
+name: deploy-on-merge-main
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - working-directory: /var/www/
+        run: git pull
