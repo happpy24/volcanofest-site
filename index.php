@@ -25,11 +25,11 @@
         <ul class="flex-outer">
           <li>
             <label for="code">Code</label>
-            <input class="field" type="number" id="code" placeholder="0000" required max="9999" min="1000">
+            <input class="field" type="number" name="code" id="code" placeholder="0000" required max="9999" min="1000">
           </li>
           <li>
             <label for="name">Name</label>
-            <input class="field" type="text" id="name" placeholder="Name" required maxlength="12">
+            <input class="field" type="text" name="name" id="name" placeholder="Name" required maxlength="12">
           </li>
         </ul>
         <div class="row">
@@ -49,7 +49,7 @@
     function submit() {
       localStorage.setItem("name", document.getElementById("name").value);
       console.log(localStorage.getItem("name"));
-      location.href = "game/index.html?" + document.getElementById("code").value;
+      setCookie();
     }
     function loadName() {
       var nameInput = document.getElementById("name");
@@ -57,7 +57,8 @@
     }
     loadName();
   </script>
-  
+    <!-- saving form to cookies -->
+    <script src="cookie.js"></script>
   <!-- changing backgrounds script -->
   <script src="background.js"></script>
 
