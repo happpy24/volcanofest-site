@@ -21,7 +21,7 @@
     </div>
 
     <div class="form" id="form">
-      <form action="javascript:submit()">
+      <form method="post" action="checkcode.php"  onsubmit="return submit();">
         <ul class="flex-outer">
           <li>
             <label for="code">Code</label>
