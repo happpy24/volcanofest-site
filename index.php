@@ -25,11 +25,11 @@
         <ul class="flex-outer">
           <li>
             <label for="code">Code</label>
-            <input class="field" type="number" id="code" placeholder="0000" required max="9999" min="1000">
+            <input class="field" type="number" name="code" id="code" placeholder="0000" required max="9999" min="1000">
           </li>
           <li>
             <label for="name">Name</label>
-            <input class="field" type="text" id="name" placeholder="Name" required maxlength="12">
+            <input class="field" type="text" name="name" id="name" placeholder="Name" required maxlength="12">
           </li>
         </ul>
         <div class="row">

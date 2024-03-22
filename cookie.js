@@ -3,5 +3,5 @@ function setCookie() {
     let Cvalue = document.getElementById("code").value;
     document.cookie = "name=" + Nvalue + ";";
     document.cookie = "code=" + Cvalue + ";";
-    location.href = "UPG?" + document.getElementById("code").value;
+    location.href = "/upg-site/game/index.html?" + document.getElementById("code").value;
   }
