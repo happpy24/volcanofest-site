@@ -42,7 +42,7 @@
     display: grid;
     justify-content: center;
     justify-items: center;
-    padding: 1em;
+    padding: 1rem;
     transform: translateY(50%);
 }
 
@@ -110,6 +110,7 @@ input[type=number]::-webkit-outer-spin-button {
     text-transform: uppercase;
     letter-spacing: .09em;
     border-radius: 25%;
+    cursor: pointer;
 }
 
 /* SVG */

@@ -9,6 +9,6 @@
 <body class="notFound">
     <p class="title">404</p>
     <p>The page you are looking for doesn't exist</p>
-    <button type="button" class="return" onclick="location.href = '/upg-site/index.html';">Return</button>
+    <button type="button" class="return" onclick="location.href = '/upg-site/index.php';">Return</button>
 </body>
 </html>

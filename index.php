@@ -21,7 +21,7 @@
     </div>
 
     <div class="form" id="form">
-      <form action="javascript:submit()">
+      <form action="checkcode.php" method="post">
         <ul class="flex-outer">
           <li>
             <label for="code">Code</label>
@@ -33,11 +33,12 @@
           </li>
         </ul>
         <div class="row">
-          <button type="submit" id="submit">Join Game</button>
+        <button type="submit" id="submit">Join Game</button>
         </div>
       </form>
     </div>
   </div>
+
 
   <div>
     <img class="svg" id="svg">
@@ -45,23 +46,15 @@
   </div>
 
   <script>
-    //submitting form
-    function submit() {
-      localStorage.setItem("name", document.getElementById("name").value);
-      console.log(localStorage.getItem("name"));
-      setCookie();
-    }
     function loadName() {
       var nameInput = document.getElementById("name");
-       nameInput.value = localStorage.getItem("name");
+      nameInput.value = localStorage.getItem("name");
     }
     loadName();
   </script>
-    <!-- saving form to cookies -->
-    <script src="cookie.js"></script>
+  <!-- saving form to cookies -->
+  <script src="cookie.js"></script>
   <!-- changing backgrounds script -->
   <script src="background.js"></script>
-
 </body>
-
 </html>
