@@ -38,12 +38,6 @@
         </div>
       </form>
     </div>
-
-    <form method="post" action="help.php">
-      <input type="text" name="fuck" id="fuck">
-      <input type="submit">
-    </form>
-
   </div>
 
 
