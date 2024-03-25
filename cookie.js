@@ -1,8 +1,7 @@
     //submitting form
-    function submit(name, code) {
+    function submit(name) {
       localStorage.setItem("name", name);
       console.log(localStorage.getItem("name"));
-      setCookie(name, code);
     }
 
 
