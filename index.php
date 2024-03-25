@@ -21,7 +21,7 @@
     </div>
 
     <div class="form" id="form">
-      <form action="checkcode.php" method="post" onsubmit="submit();">
+      <form action="checkcode.php" method="post">
         <ul class="flex-outer">
           <li>
             <label for="code">Code</label>
@@ -46,13 +46,6 @@
   </div>
 
   <script>
-    //submitting form
-    function submit() {
-      localStorage.setItem("name", document.getElementById("name").value);
-      console.log(localStorage.getItem("name"));
-      setCookie();
-    }
-
     function loadName() {
       var nameInput = document.getElementById("name");
       nameInput.value = localStorage.getItem("name");

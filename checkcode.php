@@ -1,9 +1,15 @@
+<script src="cookie.js"> onload="submit()" </script>
 <?php
 var_dump($_POST);
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo "POST SET";
+    echo "<script>submit('" . $_POST["name"] . "', '" . $_POST["code"] . "');</script>";
 } else {
     echo "POST NOT SET"; }
+
+
+
+
     // if (!isset($_POST["name"])) {
     //     echo("Name is empty");
     // }
@@ -31,3 +37,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // }
 
     // mysqli_close($conn);
+?>
