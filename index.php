@@ -33,8 +33,7 @@
           </li>
         </ul>
         <div class="row">
-          <!-- <label for="submit">Join Game</label> -->
-          <input type="submit">
+        <button type="submit" id="submit">Join Game</button>
         </div>
       </form>
     </div>
@@ -51,7 +50,7 @@
     function submit() {
       localStorage.setItem("name", document.getElementById("name").value);
       console.log(localStorage.getItem("name"));
-     // setCookie();
+      setCookie();
     }
 
     function loadName() {
@@ -64,13 +63,5 @@
   <script src="cookie.js"></script>
   <!-- changing backgrounds script -->
   <script src="background.js"></script>
-
-  <?php
-     if($_SERVER['REQUEST_METHOD'] == 'POST') {
-      echo 'POST SET';
-     } else {
-      echo 'POST NOT SET';
-     }
-         ?>
 </body>
 </html>
