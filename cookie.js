@@ -3,5 +3,5 @@ function setCookie() {
     let Cvalue = document.getElementById("code").value;
     document.cookie = "name=" + Nvalue + ";";
     document.cookie = "code=" + Cvalue + ";";
-    location.href = "/game/index.html?" + document.getElementById("code").value;
+    location.href = "/game/index.html?" + Cvalue;
   }

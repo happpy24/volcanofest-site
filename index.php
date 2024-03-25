@@ -21,7 +21,7 @@
     </div>
 
     <div class="form" id="form">
-      <form method="post" action="checkcode.php"  onsubmit="return submit();">
+      <form action="checkcode.php" method="post" onsubmit="submit();">
         <ul class="flex-outer">
           <li>
             <label for="code">Code</label>
@@ -33,11 +33,19 @@
           </li>
         </ul>
         <div class="row">
-          <button type="submit" id="submit">Join Game</button>
+          <!-- <label for="submit">Join Game</label> -->
+          <input type="submit">
         </div>
       </form>
     </div>
+
+    <form method="post" action="help.php">
+      <input type="text" name="fuck" id="fuck">
+      <input type="submit">
+    </form>
+
   </div>
+
 
   <div>
     <img class="svg" id="svg">
@@ -49,19 +57,26 @@
     function submit() {
       localStorage.setItem("name", document.getElementById("name").value);
       console.log(localStorage.getItem("name"));
-      setCookie();
+     // setCookie();
     }
+
     function loadName() {
       var nameInput = document.getElementById("name");
-       nameInput.value = localStorage.getItem("name");
+      nameInput.value = localStorage.getItem("name");
     }
     loadName();
   </script>
-    <!-- saving form to cookies -->
-    <script src="cookie.js"></script>
+  <!-- saving form to cookies -->
+  <script src="cookie.js"></script>
   <!-- changing backgrounds script -->
   <script src="background.js"></script>
 
+  <?php
+     if($_SERVER['REQUEST_METHOD'] == 'POST') {
+      echo 'POST SET';
+     } else {
+      echo 'POST NOT SET';
+     }
+         ?>
 </body>
-
 </html>
