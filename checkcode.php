@@ -47,8 +47,8 @@ if ($stmt->num_rows == 1) {
     echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "');</script>";
 } else {
     mysqli_close($conn);
-    header("Location: /index.php");
-    die("Room does not exist");
+    header("Location: https://unitypartygame.nl/");
+    exit();
 }
 
 mysqli_close($conn);
