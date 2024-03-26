@@ -1,7 +1,3 @@
-<script type="text/javascript" src="cookie.js">
-    onload = "submit(document.getElementById('name')"
-</script>
-
 <?php
 if (!isset($_POST["name"])) {
     echo ("Name is empty");
