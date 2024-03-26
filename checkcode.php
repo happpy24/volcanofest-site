@@ -1,4 +1,12 @@
+<script type="text/javascript" src="cookie.js">
+    onload = "submit()"
+</script>
+
 <?php
+echo "<script type='text/javascript' src='cookie.js'></script>";
+echo "<script type='text/javascript'>submit('" . $_POST["name"] . "');</script>";
+
+
 if (!isset($_POST["name"]) || empty($_POST["name"])) {
     echo ("Name is empty");
     exit;

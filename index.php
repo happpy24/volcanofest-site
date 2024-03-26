@@ -33,7 +33,7 @@
           </li>
         </ul>
         <div class="row">
-          <button type="submit" id="submit" onsubmit="submit()">Join Game</button>
+          <button type="submit" id="submit">Join Game</button>
         </div>
       </form>
     </div>
@@ -46,12 +46,6 @@
   </div>
 
   <script>
-    //submitting form
-    function submit() {
-      localStorage.setItem("name", name);
-      console.log(localStorage.getItem("name"));
-    }
-
     function loadName() {
       var nameInput = document.getElementById("name");
       nameInput.value = localStorage.getItem("name");
