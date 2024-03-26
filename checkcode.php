@@ -2,13 +2,6 @@
     onload = "submit()"
 </script>
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    echo "POST SET";
-    echo "<script>submit('" . $_POST["name"] . "');</script>";
-} else {
-    echo "POST NOT SET";
-}
-
 if (!isset($_POST["name"])) {
     echo ("Name is empty");
 }
@@ -39,7 +32,7 @@ if ($conn->connect_error) {
 
 $result = $conn->execute_query("SELECT Code FROM Rooms WHERE code = ? LIMIT 1", [$code]);
 if ($result->num_rows == 1) {
-    echo "<script>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "');</script>";
+    echo "<script src='cookie.js'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "');</script>";
 } else {
     mysqli_close($conn);
     die("room does not exist");
