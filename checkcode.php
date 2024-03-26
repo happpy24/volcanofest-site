@@ -18,6 +18,14 @@ if (!filter_input(INPUT_POST, "code", FILTER_VALIDATE_INT)) {
 $name = $_POST["name"];
 $code = filter_input(INPUT_POST, "code", FILTER_VALIDATE_INT);
 
+$str = file_get_contents('/var/www/db.json');
+$json = json_decode($str, true); // decode the JSON into an associative array
+
+$servername ="IP-address";
+$username ="Username";
+$password = "Password";
+$database = "Lobby";
+
 //Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 
