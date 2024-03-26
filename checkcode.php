@@ -1,6 +1,7 @@
-<script src="cookie.js">
-    onload = "submit()"
+<script type="text/javascript" src="cookie.js">
+    onload = "submit(document.getElementById('name')"
 </script>
+
 <?php
 if (!isset($_POST["name"])) {
     echo ("Name is empty");
@@ -14,9 +15,9 @@ $code = filter_input(INPUT_POST, "code", FILTER_VALIDATE_INT);
 $str = file_get_contents('/var/www/db.json');
 $json = json_decode($str, true); // decode the JSON into an associative array
 
-$servername ="IP-address";
-$username ="Username";
-$password = "Password";
+$servername = $json['IP-address'];
+$username = $json['Username'];
+$password = $json['Password'];
 $database = "Lobby";
 
 //Create connection
@@ -32,7 +33,7 @@ if ($conn->connect_error) {
 
 $result = $conn->execute_query("SELECT Code FROM Rooms WHERE code = ? LIMIT 1", [$code]);
 if ($result->num_rows == 1) {
-    echo "<script src='cookie.js'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "');</script>";
+    echo "<script type='text/javascript' src='cookie.js'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "');</script>";
 } else {
     mysqli_close($conn);
     header("Location: /index.php");
