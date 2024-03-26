@@ -35,6 +35,7 @@ if ($result->num_rows == 1) {
     echo "<script src='cookie.js'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "');</script>";
 } else {
     mysqli_close($conn);
+    header("Location: /index.php");
     die("room does not exist");
 }
 
