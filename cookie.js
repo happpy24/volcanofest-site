@@ -1,7 +1,14 @@
-function setCookie() {    
-    let Nvalue = document.getElementById("name").value;
-    let Cvalue = document.getElementById("code").value;
+    //submitting form
+    function submit(name) {
+      localStorage.setItem("name", name);
+      console.log(localStorage.getItem("name"));
+    }
+
+
+function setCookie(name, code) {    
+    let Nvalue = name;
+    let Cvalue = code;
     document.cookie = "name=" + Nvalue + ";";
     document.cookie = "code=" + Cvalue + ";";
-    location.href = "/upg-site/game/index.html?" + document.getElementById("code").value;
+    location.href = "/game/index.html?" + Cvalue;
   }
