@@ -13,7 +13,7 @@
     <a href="https://www.instagram.com/" target="_blank">Instagram</a>
     <a href="https://twitter.com/" target="_blank">Twitter</a>
     <a href="https://twitch.tv/" target="_blank">Twitch</a>
-  </div>
+  </div> 
 
   <div class="login">
     <div class="title">
