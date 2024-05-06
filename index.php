@@ -25,6 +25,8 @@
   <div class="login">
     <div class="title">
       Project UPG!
+      <br>
+      =Team UPG=
     </div>
 
     <div class="form" id="form">
