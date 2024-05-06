@@ -4,10 +4,17 @@ function submit(name) {
   console.log(localStorage.getItem("name"));
 }
 
-function setCookie(name, code) {
+function setCookie(name, code, docker) {
   let Nvalue = name;
   let Cvalue = code;
-  document.cookie = "name=" + Nvalue + ";";
-  document.cookie = "code=" + Cvalue + ";";
-  location.href = "/game/index.html?" + Cvalue;
+  let Dvalue = docker;
+  sessionStorage.setItem = "name=" + Nvalue + ";";
+  sessionStorage.setItem = "code=" + Cvalue + ";";
+  sessionStorage.setItem = "docker=" + Dvalue + ";";
+  location.href = "/game/index.html?" + Cvalue + ";";
+}
+
+function fail(){
+  location.href = "/unitypartygame.nl/";
+  document.getElementById('alertBox').style.display = 'flex';
 }

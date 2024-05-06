@@ -8,16 +8,25 @@
   <title>Login to Unity Party Game!</title>
 </head>
 
-<body id="body" onload="setbackground()">
+<body id="body" onload="setbackground();">
   <div class="links" id="links">
     <a href="https://www.instagram.com/" target="_blank">Instagram</a>
     <a href="https://twitter.com/" target="_blank">Twitter</a>
     <a href="https://twitch.tv/" target="_blank">Twitch</a>
   </div> 
 
+  <div class="alertBoxBig">
+    <div class="alert" id="alertBox">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      Code is invalid
+    </div>
+  </div>
+
   <div class="login">
     <div class="title">
       Project UPG!
+      <br>
+      =Team UPG=
     </div>
 
     <div class="form" id="form">
@@ -38,7 +47,6 @@
       </form>
     </div>
   </div>
-
 
   <div>
     <img class="svg" id="svg">

@@ -19,6 +19,7 @@ if (!isset($_POST["code"]) || empty($_POST["code"]) || !filter_var($_POST["code"
 $name = $_POST["name"];
 $code = $_POST["code"];
 
+// login info database
 $str = file_get_contents('/var/www/db.json');
 $json = json_decode($str, true); // decode the JSON into an associative array
 
@@ -43,11 +44,13 @@ $stmt->execute();
 $stmt->store_result();
 
 if ($stmt->num_rows == 1) {
+    $result = $conn->execute_query("SELECT dockerPort FROM Rooms WHERE code = [$code] LIMIT 1");
     echo "<script type='text/javascript' src='cookie.js'></script>";
-    echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "');</script>";
+    echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "', '" . [$result] ."');</script>";
 } else {
     mysqli_close($conn);
-    header("Location: https://unitypartygame.nl/");
+    echo "<script type='text/javascript' src='cookie.js'></script>";
+    echo "<script type='text/javascript'>fail();</script>";
     exit();
 }
 
