@@ -11,5 +11,10 @@ function setCookie(name, code, docker) {
   sessionStorage.setItem = "name=" + Nvalue + ";";
   sessionStorage.setItem = "code=" + Cvalue + ";";
   sessionStorage.setItem = "docker=" + Dvalue + ";";
-  location.href = "/game/index.html?" + Cvalue;
+  location.href = "/game/index.html?" + Cvalue + ";";
+}
+
+function fail(){
+  location.href = "/unitypartygame.nl/";
+  document.getElementById('alertBox').style.display = 'flex';
 }

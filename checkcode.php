@@ -49,7 +49,8 @@ if ($stmt->num_rows == 1) {
     echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "', '" . [$result] ."');</script>";
 } else {
     mysqli_close($conn);
-    header("Location: https://unitypartygame.nl/");
+    echo "<script type='text/javascript' src='cookie.js'></script>";
+    echo "<script type='text/javascript'>fail();</script>";
     exit();
 }
 
