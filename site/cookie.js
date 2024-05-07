@@ -15,6 +15,6 @@ function setCookie(name, code, docker) {
 }
 
 function fail(){
-  location.href = "/unitypartygame.nl/";
+  location.href = "../site";
   document.getElementById('alertBox').style.display = 'flex';
 }

@@ -3,6 +3,7 @@
 </script>
 
 <?php
+//setting local storage
 echo "<script type='text/javascript' src='cookie.js'></script>";
 echo "<script type='text/javascript'>submit('" . $_POST["name"] . "');</script>";
 
