@@ -4,6 +4,7 @@ function submit(name) {
   console.log(localStorage.getItem("name"));
 }
 
+//setting cookies
 function setCookie(name, code, docker) {
   let Nvalue = name;
   let Cvalue = code;
@@ -14,7 +15,9 @@ function setCookie(name, code, docker) {
   location.href = "/game/index.html?" + Cvalue + ";";
 }
 
+//wrong code
 function fail(){
-  document.getElementById('alertBox').style.display = 'flex';
   location.href = "index.php";
+  alertBoxJS = document.getElementById('alertBox');
+  alertBoxJS.style.display = 'flex';
 }

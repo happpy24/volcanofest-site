@@ -7,7 +7,7 @@
 echo "<script type='text/javascript' src='cookie.js'></script>";
 echo "<script type='text/javascript'>submit('" . $_POST["name"] . "');</script>";
 
-
+//checking if all fields are set
 if (!isset($_POST["name"]) || empty($_POST["name"])) {
     echo ("Name is empty");
     exit;
@@ -44,16 +44,20 @@ $stmt->bind_param("i", $code);
 $stmt->execute();
 $stmt->store_result();
 
+//check is room exists in DataBase and act accordingly
 if ($stmt->num_rows == 1) {
     $result = $conn->execute_query("SELECT dockerPort FROM Rooms WHERE code = [$code] LIMIT 1");
-    echo "<script type='text/javascript' src='cookie.js'></script>";
-    echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "', '" . [$result] ."');</script>";
+    echo "correct";
+    // echo "<script type='text/javascript' src='cookie.js'></script>";
+    // echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "', '" . [$result] ."');</script>";
 } else {
     mysqli_close($conn);
-    echo "<script type='text/javascript' src='cookie.js'></script>";
-    echo "<script type='text/javascript'>fail();</script>";
+    echo "wrong";
+    // echo "<script type='text/javascript' src='cookie.js'></script>";
+    // echo "<script type='text/javascript'>fail();</script>";
     exit();
 }
 
+//close connection
 mysqli_close($conn);
 ?>
