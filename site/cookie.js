@@ -11,10 +11,12 @@ function setCookie(name, code, docker) {
   sessionStorage.setItem = "name=" + Nvalue + ";";
   sessionStorage.setItem = "code=" + Cvalue + ";";
   sessionStorage.setItem = "docker=" + Dvalue + ";";
+  console.log(sessionStorage.getItem("name"));
   location.href = "/game/index.html?" + Cvalue + ";";
 }
 
 function fail(){
   location.href = "index.php";
   document.getElementById('alertBox').style.display = 'flex';
+  console.log(  document.getElementById('alertBox').style.display = 'flex')
 }
