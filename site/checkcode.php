@@ -46,7 +46,12 @@ $stmt->store_result();
 
 //check is room exists in DataBase and act accordingly
 if ($stmt->num_rows == 1) {
-    $result = $conn->execute_query("SELECT dockerPort FROM Rooms WHERE code = [$code] LIMIT 1");
+    try {
+        $result = $conn->execute_query("SELECT dockerPort FROM Rooms WHERE code = [$code] LIMIT 1");
+        
+    } catch (Error $th) {
+        echo $th;
+    }
     echo "correct";
     // echo "<script type='text/javascript' src='cookie.js'></script>";
     // echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "', '" . [$result] ."');</script>";
