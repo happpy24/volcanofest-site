@@ -15,6 +15,6 @@ function setCookie(name, code, docker) {
 }
 
 function fail(){
-  location.href = "../site";
+  location.href = "index.php";
   document.getElementById('alertBox').style.display = 'flex';
 }
