@@ -54,8 +54,8 @@ if ($stmt->num_rows == 1) {
         echo $th;
     }
     echo "correct";
-    // echo "<script type='text/javascript' src='cookie.js'></script>";
-    // echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "', '" . [$result] ."');</script>";
+    echo "<script type='text/javascript' src='cookie.js'></script>";
+    echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "', '" . [$result] ."');</script>";
 } else {
     mysqli_close($conn);
     echo "<script type='text/javascript' src='cookie.js'></script>";
