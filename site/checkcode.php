@@ -48,6 +48,7 @@ $stmt->store_result();
 if ($stmt->num_rows == 1) {
     try {
         $result = $conn->query("SELECT dockerPort FROM Rooms WHERE code = [$code] LIMIT 1");
+        echo 'queried';
         
     } catch (Error $th) {
         echo $th;
