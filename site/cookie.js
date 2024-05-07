@@ -15,6 +15,7 @@ function setCookie(name, code, docker) {
 }
 
 function fail(){
-  document.getElementById('alertBox').style.display = 'flex';
   location.href = "index.php";
+  alertBoxJS = document.getElementById('alertBox');
+  alertBoxJS.style.display = 'flex';
 }
