@@ -63,6 +63,8 @@
     if (window.location.href.indexOf("index.php?error") > -1) {
       alertBoxJS = document.getElementById('alertBox');
       alertBoxJS.style.display = 'flex';
+      var newUrl = window.location.href.replace("?error", "");
+      history.replaceState({}, document.title, newUrl);
     }
   </script>
   <!-- saving form to cookies -->
