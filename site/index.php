@@ -24,9 +24,7 @@
 
   <div class="login">
     <div class="title">
-      Project UPG!
-      <br>
-      =Team UPG=
+      <img src="SVG/logoMock2.svg">
     </div>
 
     <div class="form" id="form">

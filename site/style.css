@@ -92,13 +92,17 @@
     justify-content: center;
     justify-items: center;
     padding: 1rem;
-    transform: translateY(35%);
+    transform: translateY(10%);
 }
 
 .title {
     font-size: larger;
     font-weight: bold;
     padding-bottom: 1.5em;
+}
+
+.title img {
+    max-height: 30svh;
 }
 
 .form {
@@ -174,6 +178,7 @@ input[type=number]::-webkit-outer-spin-button {
     position: absolute;
     bottom: 0px;
     overflow: hidden;
+    z-index: -1;
 }
 
 .svg2 {
@@ -181,7 +186,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media only screen and (max-width: 600px) {
-
     .svg,
     .svg2 {
         max-height: 30svh;
