@@ -10,6 +10,7 @@
 
 <body id="body" onload="setbackground();">
   <div class="links" id="links">
+    <a href="#" target="_blank">Buy Here!</a>
     <a href="https://www.instagram.com/" target="_blank">Instagram</a>
     <a href="https://twitter.com/" target="_blank">Twitter</a>
     <a href="https://twitch.tv/" target="_blank">Twitch</a>
