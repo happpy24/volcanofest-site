@@ -30,7 +30,12 @@ $password = $json['Password'];
 $database = "Lobby";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
+try {
+    $conn = mysqli_connect($servername, $username, $password, $database);
+}
+catch (Error){
+    echo 'log-in error';
+}
 
 // Check connection
 if ($conn->connect_error) {
