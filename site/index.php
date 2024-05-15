@@ -14,7 +14,7 @@
     <a href="https://www.instagram.com/" target="_blank">Instagram</a>
     <a href="https://twitter.com/" target="_blank">Twitter</a>
     <a href="https://twitch.tv/" target="_blank">Twitch</a>
-  </div> 
+  </div>
 
   <div class="alertBoxBig">
     <div class="alert" id="alertBox">
@@ -58,6 +58,13 @@
       nameInput.value = localStorage.getItem("name");
     }
     loadName();
+
+    if (window.location.href.indexOf("index.php?error") > -1) {
+      alertBoxJS = document.getElementById('alertBox');
+      alertBoxJS.style.display = 'flex';
+      var newUrl = window.location.href.replace("?error", "");
+      history.replaceState({}, document.title, newUrl);
+    }
   </script>
   <!-- saving form to cookies -->
   <script src="cookie.js"></script>
