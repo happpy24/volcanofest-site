@@ -53,6 +53,8 @@
     <img class="svg2" id="svg2">
   </div>
 
+  <div class="team">Hexautic</div>
+
   <script>
     function loadName() {
       var nameInput = document.getElementById("name");
