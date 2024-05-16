@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" />
-  <title>Login to Unity Party Game!</title>
+  <title>Login to Volcano Fest!</title>
+  <link rel="icon" href="SVG/Favicon.ico">
 </head>
 
 <body id="body" onload="setbackground();">
   <div class="links" id="links">
+    <a href="https://hexautic.itch.io/volcano-fest" target="_blank">Buy Here!</a>
     <a href="https://www.instagram.com/" target="_blank">Instagram</a>
     <a href="https://twitter.com/" target="_blank">Twitter</a>
     <a href="https://twitch.tv/" target="_blank">Twitch</a>
@@ -24,9 +26,7 @@
 
   <div class="login">
     <div class="title">
-      Project UPG!
-      <br>
-      =Team UPG=
+      <img src="SVG/logoMock2.svg">
     </div>
 
     <div class="form" id="form">
@@ -52,6 +52,8 @@
     <img class="svg" id="svg">
     <img class="svg2" id="svg2">
   </div>
+
+  <div class="team">Hexautic</div>
 
   <script>
     function loadName() {
