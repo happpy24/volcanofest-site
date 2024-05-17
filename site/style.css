@@ -124,6 +124,9 @@
     font-weight: bolder;
     font-size: larger;
 }
+.team img{
+    height: 1.5em;
+}
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
