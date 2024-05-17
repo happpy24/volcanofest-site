@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" />
   <title>Login to Volcano Fest!</title>
-  <link rel="icon" href="SVG/Favicon.ico">
+  <link rel="icon" href="SVG/logoHexautic.svg">
 </head>
 
 <body id="body" onload="setbackground();">
@@ -26,7 +26,7 @@
 
   <div class="login">
     <div class="title">
-      <img src="SVG/logoMock2.svg">
+      <img src="SVG/logoVolcanoFest.svg">
     </div>
 
     <div class="form" id="form">
