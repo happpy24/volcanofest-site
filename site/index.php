@@ -5,19 +5,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" />
-  <title>Login to Unity Party Game!</title>
+  <title>Login to Volcano Fest!</title>
+  <link rel="icon" href="SVG/logoHexautic.svg">
 </head>
 
-<body id="body" onload="setbackground()">
+<body id="body" onload="setbackground();">
   <div class="links" id="links">
+    <a href="https://hexautic.itch.io/volcano-fest" target="_blank">Buy Here!</a>
     <a href="https://www.instagram.com/" target="_blank">Instagram</a>
     <a href="https://twitter.com/" target="_blank">Twitter</a>
     <a href="https://twitch.tv/" target="_blank">Twitch</a>
-  </div> 
+  </div>
+
+  <div class="alertBoxBig">
+    <div class="alert" id="alertBox">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      Code is invalid
+    </div>
+  </div>
 
   <div class="login">
     <div class="title">
-      Project UPG!
+      <img src="SVG/logoVolcanoFest.svg">
     </div>
 
     <div class="form" id="form">
@@ -39,11 +48,13 @@
     </div>
   </div>
 
-
   <div>
     <img class="svg" id="svg">
     <img class="svg2" id="svg2">
   </div>
+
+  <a href="https://hexautic.itch.io/" target="_blank" class="team">
+    <img src="SVG/logoHexautic.svg"></a>
 
   <script>
     function loadName() {
@@ -51,6 +62,13 @@
       nameInput.value = localStorage.getItem("name");
     }
     loadName();
+
+    if (window.location.href.indexOf("index.php?error") > -1) {
+      alertBoxJS = document.getElementById('alertBox');
+      alertBoxJS.style.display = 'flex';
+      var newUrl = window.location.href.replace("?error", "");
+      history.replaceState({}, document.title, newUrl);
+    }
   </script>
   <!-- saving form to cookies -->
   <script src="cookie.js"></script>
