@@ -24,7 +24,7 @@
     }
     if (index == 2) { // jungle
       ColorBg = "96B286";
-      ColorBox = "5C8746";
+      ColorBox = "496C37";
       svgSrc = "SVG/LeafL.svg";
       SVG.style.margin= "0px";
       svg2Src = "SVG/LeafR.svg";

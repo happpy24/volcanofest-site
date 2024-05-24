@@ -3,11 +3,10 @@
 </script>
 
 <?php
-//setting local storage
 echo "<script type='text/javascript' src='cookie.js'></script>";
 echo "<script type='text/javascript'>submit('" . $_POST["name"] . "');</script>";
 
-//checking if all fields are set
+
 if (!isset($_POST["name"]) || empty($_POST["name"])) {
     echo ("Name is empty");
     exit;
@@ -20,7 +19,6 @@ if (!isset($_POST["code"]) || empty($_POST["code"]) || !filter_var($_POST["code"
 $name = $_POST["name"];
 $code = $_POST["code"];
 
-// login info database
 $str = file_get_contents('/var/www/db.json');
 $json = json_decode($str, true); // decode the JSON into an associative array
 
@@ -30,12 +28,7 @@ $password = $json['Password'];
 $database = "Lobby";
 
 // Create connection
-try {
-    $conn = mysqli_connect($servername, $username, $password, $database);
-}
-catch (Error){
-    echo 'log-in error';
-}
+$conn = mysqli_connect($servername, $username, $password, $database);
 
 // Check connection
 if ($conn->connect_error) {
@@ -49,23 +42,14 @@ $stmt->bind_param("i", $code);
 $stmt->execute();
 $stmt->store_result();
 
-//check is room exists in DataBase and act accordingly
 if ($stmt->num_rows == 1) {
-    try {
-        echo 'queried';
-        $result = $conn->query("SELECT dockerPort FROM Rooms WHERE code = $code LIMIT 1");
-        
-    } catch (Error $th) {
-        echo $th;
-    }
     echo "<script type='text/javascript' src='cookie.js'></script>";
-    echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "', '" . [$result] ."');</script>";
+    echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "');</script>";
 } else {
-    echo "<script type='text/javascript' src='cookie.js'></script>";
-    echo "<script type='text/javascript'>fail();</script>";
+    mysqli_close($conn);
+    header("Location: https://unitypartygame.nl/");
     exit();
 }
 
-//close connection
 mysqli_close($conn);
 ?>
