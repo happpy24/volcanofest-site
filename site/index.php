@@ -54,8 +54,7 @@
   </div>
 
   <a href="https://hexautic.itch.io/" target="_blank" class="team">
-    <img src="SVG/logoHexautic.svg">
-    Hexautic</a>
+    <img src="SVG/logoHexautic.svg"></a>
 
   <script>
     function loadName() {
