@@ -26,7 +26,7 @@
 
   <div class="login">
     <div class="title">
-      <img src="SVG/logoVolcanoFest.svg">
+      <img src="SVG/logoVolcanoFest.png">
     </div>
 
     <div class="form" id="form">
