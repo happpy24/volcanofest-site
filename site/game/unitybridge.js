@@ -5,7 +5,7 @@ function UnityLoaded(unityInstance) {
     const localStorageName = localStorage.getItem('name');
     if (localStorageName) {
         console.log("Sending local storage name to Unity: " + localStorageName);
-        unityInstance.SendMessage('WebGLReceiver', 'ReceiveName', localStorageName);
+        unityInstance.SendMessage('JavascriptHook', 'ReceiveName', localStorageName);
     } else {
         console.log("No name found in local storage");
     }
@@ -20,7 +20,7 @@ function UnityLoaded(unityInstance) {
     const cookieCode = getCookie('code');
     if (cookieCode) {
         console.log("Sending cookie code to Unity: " + cookieCode);
-        unityInstance.SendMessage('WebGLReceiver', 'ReceiveCode', cookieCode);
+        unityInstance.SendMessage('JavascriptHook', 'ReceiveCode', cookieCode);
     } else {
         console.log("No code found in cookies");
     }
