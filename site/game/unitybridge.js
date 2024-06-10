@@ -11,8 +11,8 @@ function RetrieveAndSendValuesToUnity() {
 
     // Send the 'name' value to Unity
     if (unityInstance) {
-        unityInstance.SendMessage('YourScriptName', 'ReceiveName', name);
-        unityInstance.SendMessage('YourScriptName', 'ReceiveCode', code);
+        unityInstance.SendMessage('JavascriptHook', 'ReceiveName', name);
+        unityInstance.SendMessage('JavascriptHook', 'ReceiveCode', code);
     } else {
         console.error("Unity instance not found. Unable to send message.");
     }
