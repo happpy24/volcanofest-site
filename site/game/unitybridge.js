@@ -1,11 +1,13 @@
 function UnityLoaded(unityInstance) {
-    // Retrieve session storage value
+    console.log("Unity instance loaded");
     const sessionName = sessionStorage.getItem('name');
     if (sessionName) {
-        unityInstance.SendMessage('WebGLReceiver', 'ReceiveName', sessionName);
+        console.log("Sending session name to Unity: " + sessionName);
+        unityInstance.SendMessage('JavascriptHook', 'ReceiveName', sessionName);
+    } else {
+        console.log("No session name found in session storage");
     }
 
-    // Retrieve cookie value
     function getCookie(name) {
         let value = `; ${document.cookie}`;
         let parts = value.split(`; ${name}=`);
@@ -14,6 +16,9 @@ function UnityLoaded(unityInstance) {
 
     const cookieCode = getCookie('code');
     if (cookieCode) {
-        unityInstance.SendMessage('WebGLReceiver', 'ReceiveCode', cookieCode);
+        console.log("Sending cookie code to Unity: " + cookieCode);
+        unityInstance.SendMessage('JavascriptHook', 'ReceiveCode', cookieCode);
+    } else {
+        console.log("No cookie code found");
     }
 }
