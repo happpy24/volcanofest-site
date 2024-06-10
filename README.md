@@ -1,12 +1,11 @@
-# Site - Unity Party Game
+# Site - Volcano Fest
 A party game developed in Unity you can control with your phone!
 
 Developed by students at [HU](https://www.hu.nl) - Utrecht University of Applied Sciences
 
-### Unity Party Game Family
-- [upg-main](https://github.com/happpy24/upg-main) - The Main application which runs on Desktop.
-- [upg-webgl](https://github.com/happpy24/upg-webgl) - The WebGL application which runs on our webserver.
-- [upg-site](https://github.com/happpy24/upg-site) - The Website used to host the WebGL application.
+### Volcano Fest Family
+- [volcanofest](https://github.com/happpy24/volcanofest) - The Unity game, including Main application, WebGL and Server all configured for use.
+- [volcanofest-site](https://github.com/happpy24/volcanofest-site) - The Website used to host the WebGL application.
 
 ### About Site
 The Site is the place our WebGL application will run on, and provides the login functionality for our game. 
@@ -23,7 +22,7 @@ Our goal is to make a bigger party game accessible to any and all players where 
 You are in a fallen land, falled by a curse. You and up to 7 other adventurers must seek different Artifacts from every region and destroy them to lift the curse. The First one to the goal wins, who is going to be the new legend of this land?
 
 ### Who is making this?
-Us! The Unity Party Game dev team :)
+Us! The Volcano Fest development team :)
 - [Vivian Speijer](https://github.com/happpy24)
 - [Max Lichtneker](https://github.com/MaxLichtneker)
 - [Eke Reus](https://github.com/E-Meister2012)
