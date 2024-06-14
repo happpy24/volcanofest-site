@@ -36,15 +36,18 @@ if ($conn->connect_error) {
     die ("connection error");
 }
 
+//select the dockerPort
+$port = ("SELECT dockerPort FROM Rooms WHERE code = ? LIMIT 1");
+
 // Prepare and bind the statement
-$stmt = $conn->prepare("SELECT Code FROM Rooms WHERE code = ? LIMIT 1");
+$stmt = $conn->prepare($port);
 $stmt->bind_param("i", $code);
 $stmt->execute();
 $stmt->store_result();
 
 if ($stmt->num_rows == 1) {
     echo "<script type='text/javascript' src='cookie.js'></script>";
-    echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "');</script>";
+    echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "','" . $port . "');</script>";
 } else {
     mysqli_close($conn);
     header("Location: .");
