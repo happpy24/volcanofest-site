@@ -47,7 +47,7 @@ $stmt->store_result();
 
 if ($stmt->num_rows == 1) {
     echo "<script type='text/javascript' src='cookie.js'></script>";
-    echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "', '" . $_POST["code"] . "','" . $port . "');</script>";
+    echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "','" . $port . "');</script>";
 } else {
     mysqli_close($conn);
     header("Location: .");
