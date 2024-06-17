@@ -4,10 +4,10 @@ function submit(name) {
   console.log(localStorage.getItem("name"));
 }
 
-function setCookie(name, code) {
+function setCookie(name, port) {
   let Nvalue = name;
-  let Cvalue = code;
+  let Pvalue = port;
   document.cookie = "name=" + Nvalue + ";";
-  document.cookie = "code=" + Cvalue + ";";
-  location.href = "/game/index.html?" + Cvalue;
+  document.cookie = "port=" + Pvalue + ";";
+  location.href = "/game/index.html";
 }
