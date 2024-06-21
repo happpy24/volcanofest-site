@@ -12,9 +12,8 @@
 <body id="body" onload="setbackground();">
   <div class="links" id="links">
     <a href="https://hexautic.itch.io/volcano-fest" target="_blank">Buy Here!</a>
-    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-    <a href="https://twitter.com/" target="_blank">Twitter</a>
-    <a href="https://twitch.tv/" target="_blank">Twitch</a>
+    <a href="https://www.instagram.com/hexautic/" target="_blank">Instagram</a>
+    <a href="https://www.youtube.com/@Hexautic" target="_blank">Youtube</a>
   </div>
 
   <div class="alertBoxBig">
