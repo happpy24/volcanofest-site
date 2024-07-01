@@ -46,8 +46,10 @@ $stmt->execute();
 $stmt->store_result();
 
 if ($stmt->num_rows == 1) {
+    $stmt->bind_result($dockerPort);
+    $stmt->fetch();
     echo "<script type='text/javascript' src='cookie.js'></script>";
-    echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "','" . $stmt . "');</script>";
+    echo "<script type='text/javascript'>setCookie('" . $_POST["name"] . "','" . $dockerPort . "');</script>";
 } else {
     mysqli_close($conn);
     header("Location: .");
